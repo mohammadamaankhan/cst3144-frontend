@@ -49,11 +49,11 @@ For production (GitHub Pages), update to your Render.com backend URL.
 
 ## Deployment
 
-Deployed on GitHub Pages at: `[Will be added after deployment]`
+Deployed on GitHub Pages at: `[To be deployed]`
 
 ## GitHub Repository
 
-Repository: `[Will be added after GitHub setup]`
+Repository: https://github.com/mohammadamaankhan/cst3144-frontend
 
 ## Project Structure
 
