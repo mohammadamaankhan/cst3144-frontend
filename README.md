@@ -1,14 +1,19 @@
 # After-School Lessons App - Frontend
 
-Vue 3 application for browsing and booking after-school lessons.
+This is the frontend application for my CST3144 Full Stack Development coursework. It's a Vue 3 web app that allows parents and students to browse and book after-school lessons.
 
-## Tech Stack
+**Student**: Mohammad Amaan Khan (M00986493)  
+**Email**: MK2310@live.mdx.ac.uk  
+**Module**: CST3144 - Full Stack Development  
+**Academic Year**: 2025-26, Semester 1
 
-- **Framework**: Vue 3 (Composition API)
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **Icons**: Font Awesome
-- **Components**: shadcn-vue
+## Technologies Used
+
+- **Framework**: Vue 3 with Composition API
+- **Build Tool**: Vite 7.x
+- **Styling**: Tailwind CSS 3.4
+- **Icons**: Font Awesome 7.x
+- **HTTP Requests**: Native Fetch API
 - **Deployment**: GitHub Pages
 
 ## Features
@@ -47,15 +52,19 @@ VITE_API_URL=http://localhost:3000
 
 For production (GitHub Pages), update to your Render.com backend URL.
 
-## Deployment
+## Live Application
 
-Deployed on GitHub Pages at: **https://mohammadamaankhan.github.io/cst3144-frontend/**
+My app is deployed and fully functional on GitHub Pages!
 
-Connected to backend API at: **https://cst3144-backend-f7yf.onrender.com**
+**Live App**: https://mohammadamaankhan.github.io/cst3144-frontend/
 
-## GitHub Repository
+The frontend connects to my backend API hosted on Render.com: https://cst3144-backend-f7yf.onrender.com
 
-Repository: https://github.com/mohammadamaankhan/cst3144-frontend
+## Source Code
+
+**GitHub Repository**: https://github.com/mohammadamaankhan/cst3144-frontend
+
+The repository includes 10+ commits documenting my development process from initial setup through to final deployment.
 
 ## Project Structure
 
