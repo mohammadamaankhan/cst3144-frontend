@@ -3,8 +3,9 @@
 This is the frontend application for my CST3144 Full Stack Development coursework. It's a Vue 3 web app that allows parents and students to browse and book after-school lessons.
 
 **Student**: Mohammad Amaan Khan (M00986493)  
-**Email**: MK2310@live.mdx.ac.uk  
+**Email**: mk2310@live.mdx.ac.uk  
 **Module**: CST3144 - Full Stack Development  
+**Lecturer**: Dr. Chinnu Mary George  
 **Academic Year**: 2025-26, Semester 1
 
 ## Technologies Used
