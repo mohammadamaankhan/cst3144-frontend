@@ -49,7 +49,9 @@ For production (GitHub Pages), update to your Render.com backend URL.
 
 ## Deployment
 
-Deployed on GitHub Pages at: `[To be deployed]`
+Deployed on GitHub Pages at: **https://mohammadamaankhan.github.io/cst3144-frontend/**
+
+Connected to backend API at: **https://cst3144-backend-f7yf.onrender.com**
 
 ## GitHub Repository
 
