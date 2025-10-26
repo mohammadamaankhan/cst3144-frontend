@@ -159,8 +159,8 @@ import CartItem from './components/CartItem.vue';
 import SearchBar from './components/SearchBar.vue';
 import SortControls from './components/SortControls.vue';
 
-// API Base URL - will be updated to Render.com URL after deployment
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+// API Base URL - Render.com backend
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://cst3144-backend-f7yf.onrender.com';
 
 // State Management
 const lessons = ref([]); // All lessons from database
