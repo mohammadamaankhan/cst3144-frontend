@@ -43,8 +43,14 @@
           v-model:sortOrder="sortOrder"
         />
 
+        <!-- Loading State -->
+        <div v-if="loading" class="text-center py-12">
+          <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+          <p class="text-gray-600 mt-4">Loading lessons...</p>
+        </div>
+
         <!-- Lessons Grid (7% marks for display) -->
-        <div v-if="displayedLessons.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div v-else-if="displayedLessons.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <LessonCard
             v-for="lesson in displayedLessons"
             :key="lesson._id"
@@ -166,12 +172,14 @@ const sortOrder = ref('asc'); // Sort order (ascending/descending)
 const checkoutName = ref(''); // Checkout form - name
 const checkoutPhone = ref(''); // Checkout form - phone
 const orderSubmitted = ref(false); // Order submission status
+const loading = ref(true); // Loading state for lessons
 
 // ===== FETCH FUNCTIONS (9% marks) =====
 
 // Fetch all lessons from API (3% marks)
 async function fetchLessons() {
   try {
+    loading.value = true;
     const response = await fetch(`${API_BASE_URL}/lessons`);
     if (!response.ok) throw new Error('Failed to fetch lessons');
     const data = await response.json();
@@ -179,6 +187,8 @@ async function fetchLessons() {
   } catch (error) {
     console.error('Error fetching lessons:', error);
     alert('Failed to load lessons. Please try again later.');
+  } finally {
+    loading.value = false;
   }
 }
 
