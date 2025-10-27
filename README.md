@@ -1,6 +1,6 @@
 # After-School Lessons App - Frontend
 
-This is the frontend application for my CST3144 Full Stack Development coursework. It's a Vue 3 web app that allows parents and students to browse and book after-school lessons.
+This is the frontend application for my CST3144 Full Stack Development coursework. It's a Vue 2 web app that allows parents and students to browse and book after-school lessons.
 
 **Student**: Mohammad Amaan Khan (M00986493)  
 **Email**: mk2310@live.mdx.ac.uk  
