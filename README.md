@@ -10,11 +10,11 @@ This is the frontend application for my CST3144 Full Stack Development coursewor
 
 ## Technologies Used
 
-- **Framework**: Vue 2.7 with Composition API (backported from Vue 3)
+- **Framework**: Vue 2
 - **Build Tool**: Vite 4.5
 - **Styling**: Tailwind CSS 3.4
-- **Icons**: Font Awesome 7.x
-- **HTTP Requests**: Native Fetch API
+- **Icons**: Font Awesome
+- **HTTP Requests**: Fetch API
 - **Deployment**: GitHub Pages
 
 ## Features
