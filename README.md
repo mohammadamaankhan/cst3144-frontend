@@ -10,8 +10,8 @@ This is the frontend application for my CST3144 Full Stack Development coursewor
 
 ## Technologies Used
 
-- **Framework**: Vue 3 with Composition API
-- **Build Tool**: Vite 7.x
+- **Framework**: Vue 2.7 with Composition API (backported from Vue 3)
+- **Build Tool**: Vite 4.5
 - **Styling**: Tailwind CSS 3.4
 - **Icons**: Font Awesome 7.x
 - **HTTP Requests**: Native Fetch API
