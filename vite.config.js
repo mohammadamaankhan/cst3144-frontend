@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { createVuePlugin } from 'vite-plugin-vue2'
 
-// https://vite.dev/config/
+// Vite config for Vue 2.7 with Composition API support
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [createVuePlugin()],
   // Base path for GitHub Pages deployment
   base: '/cst3144-frontend/',
 })

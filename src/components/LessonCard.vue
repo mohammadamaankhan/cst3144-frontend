@@ -34,16 +34,19 @@
   </div>
 </template>
 
-<script setup>
-// Props for lesson data (7% marks requirement)
-defineProps({
-  lesson: {
-    type: Object,
-    required: true
-  }
-});
-
-// Emit event for add to cart action
-defineEmits(['add-to-cart']);
+<script>
+// LessonCard component for displaying individual lessons
+export default {
+  name: 'LessonCard',
+  // Props for lesson data (7% marks requirement)
+  props: {
+    lesson: {
+      type: Object,
+      required: true
+    }
+  },
+  // Emit event for add to cart action
+  emits: ['add-to-cart'],
+};
 </script>
 

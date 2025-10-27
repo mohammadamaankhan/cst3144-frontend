@@ -21,39 +21,45 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue';
+<script>
+// SearchBar component with debounced search functionality
+export default {
+  name: 'SearchBar',
+  // Props for search query (10% marks requirement - search feature)
+  props: {
+    searchQuery: {
+      type: String,
+      required: true
+    }
+  },
+  // Emit event for search changes
+  emits: ['update:searchQuery', 'search'],
+  setup(props, { emit }) {
+    // Debounce timer
+    let debounceTimer = null;
 
-// Props for search query (10% marks requirement - search feature)
-const props = defineProps({
-  searchQuery: {
-    type: String,
-    required: true
-  }
-});
+    // Handle input with debouncing for "search as you type" (3% marks)
+    function handleInput(event) {
+      const value = event.target.value;
+      
+      // Update the query immediately for display
+      emit('update:searchQuery', value);
+      
+      // Clear existing timer
+      if (debounceTimer) {
+        clearTimeout(debounceTimer);
+      }
+      
+      // Set new timer for search API call (300ms debounce)
+      debounceTimer = setTimeout(() => {
+        emit('search', value);
+      }, 300);
+    }
 
-// Emit event for search changes
-const emit = defineEmits(['update:searchQuery', 'search']);
-
-// Debounce timer
-let debounceTimer = null;
-
-// Handle input with debouncing for "search as you type" (3% marks)
-function handleInput(event) {
-  const value = event.target.value;
-  
-  // Update the query immediately for display
-  emit('update:searchQuery', value);
-  
-  // Clear existing timer
-  if (debounceTimer) {
-    clearTimeout(debounceTimer);
-  }
-  
-  // Set new timer for search API call (300ms debounce)
-  debounceTimer = setTimeout(() => {
-    emit('search', value);
-  }, 300);
-}
+    return {
+      handleInput,
+    };
+  },
+};
 </script>
 

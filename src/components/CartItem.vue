@@ -27,16 +27,19 @@
   </div>
 </template>
 
-<script setup>
-// Props for cart item data (5% marks requirement)
-defineProps({
-  item: {
-    type: Object,
-    required: true
-  }
-});
-
-// Emit event for remove from cart action
-defineEmits(['remove-from-cart']);
+<script>
+// CartItem component for displaying items in shopping cart
+export default {
+  name: 'CartItem',
+  // Props for cart item data (5% marks requirement)
+  props: {
+    item: {
+      type: Object,
+      required: true
+    }
+  },
+  // Emit event for remove from cart action
+  emits: ['remove-from-cart'],
+};
 </script>
 

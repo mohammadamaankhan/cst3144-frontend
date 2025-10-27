@@ -80,20 +80,23 @@
   </div>
 </template>
 
-<script setup>
-// Props for current sort state (10% marks requirement)
-defineProps({
-  sortBy: {
-    type: String,
-    required: true
+<script>
+// SortControls component for lesson sorting functionality
+export default {
+  name: 'SortControls',
+  // Props for current sort state (10% marks requirement)
+  props: {
+    sortBy: {
+      type: String,
+      required: true
+    },
+    sortOrder: {
+      type: String,
+      required: true
+    }
   },
-  sortOrder: {
-    type: String,
-    required: true
-  }
-});
-
-// Emit events for sort changes
-defineEmits(['update:sortBy', 'update:sortOrder']);
+  // Emit events for sort changes
+  emits: ['update:sortBy', 'update:sortOrder'],
+};
 </script>
 

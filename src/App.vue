@@ -152,15 +152,24 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import { ref, computed, onMounted } from 'vue';
 import LessonCard from './components/LessonCard.vue';
 import CartItem from './components/CartItem.vue';
 import SearchBar from './components/SearchBar.vue';
 import SortControls from './components/SortControls.vue';
 
-// API Base URL - Render.com backend
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://cst3144-backend-f7yf.onrender.com';
+export default {
+  name: 'App',
+  components: {
+    LessonCard,
+    CartItem,
+    SearchBar,
+    SortControls,
+  },
+  setup() {
+    // API Base URL - Render.com backend
+    const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://cst3144-backend-f7yf.onrender.com';
 
 // State Management
 const lessons = ref([]); // All lessons from database
@@ -371,4 +380,34 @@ function removeFromCart(item) {
 onMounted(() => {
   fetchLessons();
 });
+
+    // Return all reactive state and functions for template access
+    return {
+      // State
+      lessons,
+      cart,
+      showCart,
+      searchQuery,
+      sortBy,
+      sortOrder,
+      checkoutName,
+      checkoutPhone,
+      orderSubmitted,
+      loading,
+      // Computed
+      displayedLessons,
+      cartTotal,
+      isNameValid,
+      isPhoneValid,
+      isCheckoutValid,
+      // Methods
+      fetchLessons,
+      performSearch,
+      submitOrder,
+      updateLessonSpaces,
+      addToCart,
+      removeFromCart,
+    };
+  },
+};
 </script>
