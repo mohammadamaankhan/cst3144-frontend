@@ -10,6 +10,7 @@
           <label class="flex items-center cursor-pointer">
             <input
               type="radio"
+              name="sortAttribute"
               value="subject"
               :checked="sortBy === 'subject'"
               @change="$emit('update:sortBy', 'subject')"
@@ -20,6 +21,7 @@
           <label class="flex items-center cursor-pointer">
             <input
               type="radio"
+              name="sortAttribute"
               value="location"
               :checked="sortBy === 'location'"
               @change="$emit('update:sortBy', 'location')"
@@ -30,6 +32,7 @@
           <label class="flex items-center cursor-pointer">
             <input
               type="radio"
+              name="sortAttribute"
               value="price"
               :checked="sortBy === 'price'"
               @change="$emit('update:sortBy', 'price')"
@@ -40,6 +43,7 @@
           <label class="flex items-center cursor-pointer">
             <input
               type="radio"
+              name="sortAttribute"
               value="spaces"
               :checked="sortBy === 'spaces'"
               @change="$emit('update:sortBy', 'spaces')"
@@ -57,6 +61,7 @@
           <label class="flex items-center cursor-pointer">
             <input
               type="radio"
+              name="sortOrder"
               value="asc"
               :checked="sortOrder === 'asc'"
               @change="$emit('update:sortOrder', 'asc')"
@@ -67,6 +72,7 @@
           <label class="flex items-center cursor-pointer">
             <input
               type="radio"
+              name="sortOrder"
               value="desc"
               :checked="sortOrder === 'desc'"
               @change="$emit('update:sortOrder', 'desc')"
