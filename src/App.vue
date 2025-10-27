@@ -33,14 +33,17 @@
       <div v-if="!showCart">
         <!-- Search Bar (10% marks: 7% backend + 3% frontend) -->
         <SearchBar
-          v-model:searchQuery="searchQuery"
+          :searchQuery="searchQuery"
+          @update:searchQuery="searchQuery = $event"
           @search="performSearch"
         />
 
         <!-- Sort Controls (10% marks) -->
         <SortControls
-          v-model:sortBy="sortBy"
-          v-model:sortOrder="sortOrder"
+          :sortBy="sortBy"
+          :sortOrder="sortOrder"
+          @update:sortBy="sortBy = $event"
+          @update:sortOrder="sortOrder = $event"
         />
 
         <!-- Loading State -->
