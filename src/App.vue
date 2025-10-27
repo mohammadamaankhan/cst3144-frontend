@@ -13,10 +13,10 @@
       <div class="flex justify-end mb-6">
         <button
           @click="showCart = !showCart"
-          :disabled="cart.length === 0"
+          :disabled="!showCart && cart.length === 0"
           :class="[
             'flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-colors',
-            cart.length > 0
+            showCart || cart.length > 0
               ? 'bg-green-600 text-white hover:bg-green-700 cursor-pointer'
               : 'bg-gray-300 text-gray-500 cursor-not-allowed'
           ]"
